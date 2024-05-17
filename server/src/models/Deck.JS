@@ -1,16 +1,20 @@
-// create your User model here
+// create your Deck  model here
 const { DataTypes} = require("sequelize");
 const sequelize = require('../db/config');
 
-const User = sequelize.define('User',{
-username:{
-    type: DataTypes.STRING,
-    allowNuLL: false
-},
+const Deck  = sequelize.define('Deck',{
 id:{
     type: DataTypes.INTEGER,
     allowNuLL: false
 },
+name:{
+    type: DataTypes.STRING,
+    allowNuLL: false
+},
+xp:{
+    type: DataTypes.INTEGER,
+    allowNuLL: false
+}
 
 });  
-module.exports = User;
+module.exports = Deck ;
