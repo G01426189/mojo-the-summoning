@@ -1,20 +1,21 @@
-// create your Deck  model here
-const { DataTypes} = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require('../db/config');
 
-const Deck  = sequelize.define('Deck',{
-id:{
+const Deck = sequelize.define('Deck', {
+  id: {
     type: DataTypes.INTEGER,
-    allowNuLL: false
-},
-name:{
+    allowNull: false,
+    autoIncrement: true,
+    primaryKey: true,
+  },
+  name: {
     type: DataTypes.STRING,
-    allowNuLL: false
-},
-xp:{
+    allowNull: false,
+  },
+  xp: {
     type: DataTypes.INTEGER,
-    allowNuLL: false
-}
+    allowNull: false,
+  }
+});
 
-});  
-module.exports = Deck ;
+module.exports = Deck;
